@@ -14,7 +14,6 @@ function PostForm({ setPublishedPosts }) {
 	};
 
 	const handleContent = (val) => {
-		console.log("value", val);
 		setContent(val);
 	};
 
@@ -27,13 +26,7 @@ function PostForm({ setPublishedPosts }) {
 		allPosts.push(payload);
 		setAllPosts(allPosts);
 		setPublishedPosts(allPosts);
-
-		console.log("[posts", allPosts);
 	};
-
-	useEffect(() => {
-		console.log("[posts", allPosts);
-	}, []);
 
 	return (
 		<div>
