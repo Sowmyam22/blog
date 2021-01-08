@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchBarComponent from "../components/SearchBar";
 import Header from "./Header";
 import PostForm from "./PostForm";
 import PublishedPosts from "./PublishedPosts";
 
 function Index() {
+	const [selectedOption, setSelectedOption] = useState("post-form");
+
 	return (
 		<div>
 			<div className="search-bar-wrapper">
@@ -12,20 +14,20 @@ function Index() {
 			</div>
 
 			<div className="header-wrapper">
-				<Header />
+				<Header setSelectedOption={setSelectedOption} />
 			</div>
 
-			{/**  if button choosen === new post **/}
-			<div className="form-wrapper">
-				<PostForm />
-			</div>
-
-			{/**  if button choosen === published **/}
-			<div className="form-wrapper">
-				<PublishedPosts />
-			</div>
+			{selectedOption === "post-form" ? (
+				<div className="form-wrapper">
+					<PostForm />
+				</div>
+			) : (
+				<div className="form-wrapper">
+					<PublishedPosts />
+				</div>
+			)}
 		</div>
-	)
+	);
 }
 
 export default Index;
