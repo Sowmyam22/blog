@@ -33,7 +33,7 @@ function PostForm({ setPublishedPosts }) {
 			<TextInput label="Title" onChange={handleTitle} value={title} />
 			<TextArea label="Content" onChange={handleContent} value={content} />
 
-			<ButtonComponent name="Save Post" onClick={handleSubmit} />
+			<ButtonComponent name="Publish" onClick={handleSubmit} />
 		</div>
 	);
 }
