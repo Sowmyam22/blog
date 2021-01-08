@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-function PublishedPosts() {
+function PublishedPosts({ allPosts }) {
 	return <div>PublishedPosts</div>;
 }
 

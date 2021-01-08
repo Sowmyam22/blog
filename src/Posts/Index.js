@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SearchBarComponent from "../components/SearchBar";
 import Header from "./Header";
 import PostForm from "./PostForm";
@@ -6,6 +6,7 @@ import PublishedPosts from "./PublishedPosts";
 
 function Index() {
 	const [selectedOption, setSelectedOption] = useState("post-form");
+	const [publishedPosts, setPublishedPosts] = useState([]);
 
 	return (
 		<div>
@@ -19,11 +20,11 @@ function Index() {
 
 			{selectedOption === "post-form" ? (
 				<div className="form-wrapper">
-					<PostForm />
+					<PostForm setPublishedPosts={setPublishedPosts} />
 				</div>
 			) : (
 				<div className="form-wrapper">
-					<PublishedPosts />
+					<PublishedPosts allPosts={publishedPosts} />
 				</div>
 			)}
 		</div>

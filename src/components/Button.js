@@ -1,6 +1,6 @@
 import React from "react";
 
-function Button({ name, buttonStyles, buttonType, onClick }) {
+function Button({ name, buttonStyles, buttonType, onClick, submitForm }) {
 	const handleSubmit = (type) => {
 		onClick(type);
 	};
