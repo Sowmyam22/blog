@@ -23,7 +23,7 @@ function Index() {
 					<PostForm setPublishedPosts={setPublishedPosts} />
 				</div>
 			) : (
-				<div className="form-wrapper">
+				<div className="list-wrapper">
 					<PublishedPosts allPosts={publishedPosts} />
 				</div>
 			)}

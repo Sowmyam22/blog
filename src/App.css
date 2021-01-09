@@ -60,3 +60,27 @@
   background-color: #5f9ea0;
   color: white;
 }
+
+.text-input {
+  border-radius: 5px;
+  width: 500px;
+  padding: 8px 12px;
+}
+
+.textarea-input {
+  border-radius: 5px;
+  width: 500px;
+  padding: 8px 12px;
+}
+
+.form-wrapper {
+  padding: 30px 300px;
+}
+
+.form-content {
+  padding: 30px 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}

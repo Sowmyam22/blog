@@ -10,7 +10,7 @@ function TextArea({ label, onChange, value }) {
 			<label htmlFor={label}>{label}:</label>
 			<br />
 			<textarea
-				name="w3review"
+				className="textarea-input"
 				rows="4"
 				value={value}
 				onChange={(e) => handleInput(e)}

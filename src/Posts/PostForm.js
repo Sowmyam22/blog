@@ -29,11 +29,13 @@ function PostForm({ setPublishedPosts }) {
 	};
 
 	return (
-		<div>
+		<div className="form-content">
 			<TextInput label="Title" onChange={handleTitle} value={title} />
 			<TextArea label="Content" onChange={handleContent} value={content} />
 
-			<ButtonComponent name="Publish" onClick={handleSubmit} />
+			<div style={{ padding: "20px" }}>
+				<ButtonComponent name="Publish" onClick={handleSubmit} />
+			</div>
 		</div>
 	);
 }

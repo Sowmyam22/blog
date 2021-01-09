@@ -9,7 +9,12 @@ function TextInput({ label, onChange, value }) {
 		<div>
 			<label htmlFor={label}>{label}:</label>
 			<br />
-			<input type="text" value={value} onChange={(e) => handleInput(e)} />
+			<input
+				className="text-input"
+				type="text"
+				value={value}
+				onChange={(e) => handleInput(e)}
+			/>
 			<br />
 		</div>
 	);
